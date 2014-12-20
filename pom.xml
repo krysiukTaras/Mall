@@ -5,8 +5,13 @@
   <artifactId>Mall</artifactId>
   <packaging>war</packaging>
   <version>1.0</version>
-  <name>Mall Maven Webapp</name>
+  <name>Mall</name>
   <url>http://maven.apache.org</url>
+
+    <properties>
+        <jdk.version>1.8</jdk.version>
+    </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.testng</groupId>
@@ -14,8 +19,24 @@
       <version>6.1.1</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.0.1</version>
+      </dependency>
   </dependencies>
   <build>
     <finalName>Mall</finalName>
+
+    <plugins>
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.2</version>
+            <configuration>
+                <path>/Mall</path>
+            </configuration>
+        </plugin>
+    </plugins>
   </build>
 </project>
