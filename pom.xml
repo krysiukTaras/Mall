@@ -8,10 +8,6 @@
   <name>Mall</name>
   <url>http://maven.apache.org</url>
 
-    <properties>
-        <jdk.version>1.8</jdk.version>
-    </properties>
-
   <dependencies>
 
     <dependency>
@@ -22,8 +18,14 @@
     </dependency>
       <dependency>
           <groupId>javax.servlet</groupId>
-          <artifactId>servlet-api</artifactId>
-          <version>2.5</version>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>tomcat-servlet-api</artifactId>
+          <version>8.0.12</version>
+          <scope>provided</scope>
       </dependency>
 
   </dependencies>
@@ -37,6 +39,30 @@
             <version>2.2</version>
             <configuration>
                 <path>/Mall</path>
+            </configuration>
+        </plugin>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.6</source>
+                <target>1.6</target>
+            </configuration>
+        </plugin>
+        <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>1.8.3</version>
+            <configuration>
+                <overlays>
+                    <overlay>
+                        <groupId>yourgroupid</groupId>
+                        <artifactId>yourJqueryArtifactId</artifactId>
+                        <type>zip</type>
+                        <targetPath/>
+                        <includes>
+                            <include>js/jquery.js</include>
+                        </includes>
+                    </overlay>
+                </overlays>
             </configuration>
         </plugin>
     </plugins>
