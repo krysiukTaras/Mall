@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background:greenyellow;
+    background: #ffffff;
     position: relative;
     font-weight:400;
 }
@@ -39,8 +39,8 @@ h1, h2, h3, h4, h5, h6 {
 
         /*HEADER.CSS*/
 
-.header_top {
-    background: none repeat scroll 0 0 #f0ad4e;
+#header_top {
+    background: none repeat scroll 0 0 #c3f0b7;
 }
 
 .contactinfo ul li:first-child{
@@ -120,27 +120,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-middle .container .row .col-sm-8 {
     padding-right:0;
-}
-
-.usa {
-    border-radius: 0;
-    color: #B4B1AB;
-    font-size: 12px;
-    margin-right: 20px;
-    padding: 2px 15px;
-    margin-top: 10px;
-}
-
-.usa:hover {
-    background:#FE980F;
-    color:#fff;
-    border-color:#FE980F;
-}
-
-.usa:active, .usa.active {
-    background: none repeat scroll 0 0 #FE980F;
-    box-shadow: inherit;
-    outline: 0 none;
 }
 
 .btn-group.open .dropdown-toggle {
@@ -225,17 +204,17 @@ h1, h2, h3, h4, h5, h6 {
 .search_box input {
     background: #F0F0E9;
     border: medium none;
-    color: #B2B2B2;
+    color: #010102;
     font-family: 'roboto';
     font-size: 12px;
     font-weight: 300;
     height: 35px;
     outline: medium none;
     padding-left: 10px;
-    width: 155px;
-    background-image: url(../images/home/searchicon.png);
+    width: 200px;
+    background-image: url(../images/searchicon.png);
     background-repeat: no-repeat;
-    background-position: 130px;
+    background-position: 180px;
 }
 
 
@@ -309,4 +288,11 @@ ul.sub-menu {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
+}
+
+#logo_id{
+    max-width: 100%;
+    min-width: 1%;
+    height: 50px;
+    width: 140px;
 }
